@@ -3,6 +3,7 @@ import Counter from './Counter'
 
 function CardItem(props) {
     const [items, setItems] = useState([])
+    const [total, setTotal] = useState(0)
 
     useEffect( () => {
         getCart()
@@ -21,6 +22,11 @@ function CardItem(props) {
         }
         
     }
+
+    function updateTotal (price) {
+        setTotal(price)
+    }
+    
   return (
     <div>
         {(items.length == 0) 
@@ -35,7 +41,7 @@ function CardItem(props) {
                     <img className='w-24' src={items.image}/>
                     <p>{items.title}</p>
                     <p>${items.price}</p>
-                    <Counter cartQty={props.cartQty} setCartQty={props.setCartQty} />
+                    <Counter cartQty={props.cartQty} setCartQty={props.setCartQty} itemPrice={items.price} updateTotal={updateTotal} />
                     <p>{items.price}</p>
                 </div>
             ))}

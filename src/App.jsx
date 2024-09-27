@@ -4,6 +4,7 @@ import { useState } from "react"
 
 function App() {
   const [cartQuantity, setCartQuantity] = useState(0)
+  
   return (
     <div className="container mx-auto px-10 ">
       

@@ -5,14 +5,23 @@ function Counter(props) {
     const cartQty = props.cartQty
     const setCartQty = props.setCartQty
     function increaseQty() {
-        setCounter(counter + 1)
+        const newCounter = counter + 1
+        setCounter(newCounter)
         setCartQty(cartQty + 1)
+        const total = (newCounter)
+        console.log(total)
+        // props.updateTotal(total)
     }
+
+    
 
     function decreaseQty(){
         if (counter == 0 ) return 
-        setCounter(counter-1)
+        const newCounter = counter - 1
+        setCounter(newCounter)
         setCartQty(cartQty - 1)
+        const total = (newCounter)
+        console.log(total)
     }
   return (
     <div className="flex">
