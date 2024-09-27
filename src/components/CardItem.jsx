@@ -9,9 +9,9 @@ function CardItem(props) {
         setTotal(price)
     }
     return (
-        <div className='border-2 border-indigo-600 px-5 py-3 my-5 grid grid-cols-8 gap-4 items-center rounded font-thin' >
+        <div className='border-2 border-indigo-600 px-5 py-3 my-5 grid grid-cols-8 gap-4 items-center rounded' >
         <img className="h-32" src={props.items.image} />
-        <p className="col-span-3 font-medium">{props.items.title}</p>
+        <p className="col-span-3 ">{props.items.title}</p>
         <p className="text-center">${props.items.price}</p>
         <Counter
             cartQty={props.cartQty}
@@ -20,7 +20,7 @@ function CardItem(props) {
             updateTotalPrice={updateTotalPrice}/>
         <div className="grid col-span-2 justify-center text-center">
             <p>Total: </p>
-            <p>${total}</p>
+            <p>${total.toFixed(2)}</p>
         </div>
         
         </div>
