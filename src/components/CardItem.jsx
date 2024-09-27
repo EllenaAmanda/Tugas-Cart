@@ -23,19 +23,25 @@ function CardItem() {
     }
   return (
     <div>
-
-        {console.log(items)}
-        {items.map((items,index) => (
-            <div> 
-                <img className='w-24' src={items.image}/>
-                <p>{items.title}</p>
-                <p>${items.price}</p>
-                <Counter />
-                <p>Total Price</p>
-            </div>
-        ))
-
+        {(items.length == 0) 
+        ? 
+        <div className="text-center ">
+            <span className='text-xl text-slate-400 font-bold'>Loading...</span> 
+        </div>
+        :
+        <div>
+            {items.map((items,index) => (
+                <div key={index}> 
+                    <img className='w-24' src={items.image}/>
+                    <p>{items.title}</p>
+                    <p>${items.price}</p>
+                    <Counter />
+                    <p>Total Price</p>
+                </div>
+            ))}
+        </div>
         }
+        
 
         
     </div>
