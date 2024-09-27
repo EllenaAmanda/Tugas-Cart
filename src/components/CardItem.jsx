@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Counter from './Counter'
 
-function CardItem() {
+function CardItem(props) {
     const [items, setItems] = useState([])
 
     useEffect( () => {
@@ -31,12 +31,12 @@ function CardItem() {
         :
         <div>
             {items.map((items,index) => (
-                <div key={index}> 
+                <div className='border border-indigo-600 px-5 py-3 my-5 grid grid-cols-5 gap-4' key={index}> 
                     <img className='w-24' src={items.image}/>
                     <p>{items.title}</p>
                     <p>${items.price}</p>
-                    <Counter />
-                    <p>Total Price</p>
+                    <Counter cartQty={props.cartQty} setCartQty={props.setCartQty} />
+                    <p>{items.price}</p>
                 </div>
             ))}
         </div>

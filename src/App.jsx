@@ -5,10 +5,10 @@ import { useState } from "react"
 function App() {
   const [cartQuantity, setCartQuantity] = useState(0)
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-10 ">
       
       <Navbar cartQty={cartQuantity} />
-      <CardList />
+      <CardList cartQty={cartQuantity} setCartQty={setCartQuantity}/>
     </div>
   );
 }

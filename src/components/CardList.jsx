@@ -1,9 +1,10 @@
 import CardItem from "./CardItem"
 
-function CardList() {
+function CardList(props) {
   return (
     <div>
-        <CardItem />
+      {/* {console.log(props.cartQty)} */}
+        <CardItem cartQty={props.cartQty} setCartQty={props.setCartQty} />
         
     </div>
   )
