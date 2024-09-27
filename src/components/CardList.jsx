@@ -4,8 +4,6 @@ function CardList() {
   return (
     <div>
         <CardItem />
-        <CardItem />
-        <CardItem />
         
     </div>
   )
