@@ -8,9 +8,8 @@ function Counter(props) {
         const newCounter = counter + 1
         setCounter(newCounter)
         setCartQty(cartQty + 1)
-        const total = (newCounter)
-        console.log(total)
-        // props.updateTotal(total)
+        // console.log(total)
+        props.updateTotalPrice(newCounter * props.itemPrice)
     }
 
     
@@ -21,7 +20,8 @@ function Counter(props) {
         setCounter(newCounter)
         setCartQty(cartQty - 1)
         const total = (newCounter)
-        console.log(total)
+        // console.log(total)
+        props.updateTotalPrice(newCounter * props.itemPrice)
     }
   return (
     <div className="flex">
