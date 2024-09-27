@@ -24,10 +24,10 @@ function Counter(props) {
         props.updateTotalPrice(newCounter * props.itemPrice)
     }
   return (
-    <div className="flex">
-        <button className="bg-indigo-500 flex-none w-8 rounded h-[30px]" onClick={decreaseQty} >-</button>
+    <div className="flex justify-center">
+        <button className="bg-indigo-500 flex-none w-8 rounded h-[30px] text-white" onClick={decreaseQty} >-</button>
         <span className="flex-none w-8 text-center">{counter}</span>
-        <button className="bg-indigo-500 flex-none w-8 rounded h-[30px]" onClick={increaseQty}>+</button>
+        <button className="bg-indigo-500 flex-none w-8 rounded h-[30px] text-white" onClick={increaseQty}>+</button>
     </div>
   )
 }

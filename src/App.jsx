@@ -6,7 +6,7 @@ function App() {
   const [cartQuantity, setCartQuantity] = useState(0)
   
   return (
-    <div className="container mx-auto px-10 ">
+    <div className="container mx-auto px-10 w-4/5">
       
       <Navbar cartQty={cartQuantity} />
       <CardList cartQty={cartQuantity} setCartQty={setCartQuantity}/>
