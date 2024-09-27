@@ -1,11 +1,17 @@
-import { useState } from "react";
+import CardItem from "./components/CardItem";
+import CardList from "./components/CardList";
+import Counter from "./components/Counter";
+import Navbar from "./components/Navbar";
+// import { useState } from "react"
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  // const [count, setCounter] = useState(0)
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      {/* <Counter counter={count} /> */}
+      {/* <CardItem /> */}
+      <Navbar />
+      <CardList />
     </>
   );
 }
